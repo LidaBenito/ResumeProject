@@ -1,0 +1,38 @@
+﻿@using System.ComponentModel
+<!DOCTYPE html>
+<html>
+<head>
+    <partial name="AdminMetaTags" />
+    <title>پنل مدیریت | @ViewData["Title"]</title>
+    <partial name="_HeaderAmin" />
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <<partial name="_NavbarAdmin" />
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <a href="index3.html" class="brand-link">
+                <img src="/Admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                style="opacity: .8">
+                <span class="brand-text font-weight-light">پنل مدیریت</span>
+            </a>
+            @await Component.InvokeAsync(name: "AdminSidebar")
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                 <partial name="_Contentheader" />
+                </div>
+            </div>
+            <section class="content">
+                <div class="container-fluid">
+                 @RenderBody()
+                </div>
+            </section>
+        </div>
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
+    </div>
+ <partial name="FooterAdmin" />
+</body>
+</html>
