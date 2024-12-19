@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Resume.WebUI.Areas.admin.Controllers
+namespace Resume.WebUI.Areas.Admin.Controllers
 {
     public class HomeController : AdminBaseController
     {

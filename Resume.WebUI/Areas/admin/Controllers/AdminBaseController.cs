@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Resume.WebUI.Areas.admin.Controllers
+namespace Resume.WebUI.Areas.Admin.Controllers
 {
-    [Area(areaName:"Admin")]
+    [Area("Admin")]
     public class AdminBaseController : Controller
     {
         protected string SuccessMsg = "Success Message";

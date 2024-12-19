@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Resume.WebUI.Areas.admin.Components
+namespace Resume.WebUI.Areas.Admin.Components
 {
     public class AdminSidebarViewComponent : ViewComponent
     {
