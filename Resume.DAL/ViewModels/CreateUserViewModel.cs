@@ -1,6 +1,6 @@
 ﻿namespace Resume.DAL.ViewModels
 {
-    internal class CreateUserViewModel
+    public class CreateUserViewModel
     {
     }
 }
