@@ -1,7 +1,15 @@
+using Microsoft.CodeAnalysis.Options;
+using Microsoft.EntityFrameworkCore;
+using Resume.DAL.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ResumeContext>(optionsAction: options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ResumeConnectionString"));
+});
 
 var app = builder.Build();
 
