@@ -1,6 +1,6 @@
 ﻿namespace Resume.DAL.ViewModels
 {
-    internal class EditUserViewModel
+    public class EditUserViewModel
     {
     }
 }
