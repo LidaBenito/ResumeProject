@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <partial name="AdminMetaTags" />
+    <partial name="_AdminMetaTags" />
     <title>پنل مدیریت | @ViewData["Title"]</title>
     <partial name="_HeaderAmin" />
+    
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -21,7 +22,7 @@
         <div class="content-wrapper">
             <div class="content-header">
                 <div class="container-fluid">
-                 <partial name="_Contentheader" />
+                    <partial name="_Contentheader" />
                 </div>
             </div>
             <section class="content">
@@ -33,6 +34,6 @@
         <aside class="control-sidebar control-sidebar-dark">
         </aside>
     </div>
- <partial name="FooterAdmin" />
+    <partial name="_FooterAdmin" />
 </body>
 </html>
