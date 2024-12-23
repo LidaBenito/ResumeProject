@@ -34,22 +34,47 @@ namespace Resume.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> Create(CreateUserViewModel model)
         {
             if (!ModelState.IsValid)
-            {
+            
                 return View(model);
+            var result = await _userService.CreateUser(model);
+            #region CheckResult
+            switch (result)
+            {
+                case CreateUserResult.Success:
+                    break;
+                case CreateUserResult.Error:
+                    break;
             }
             return View();
         }
         public async Task<IActionResult> Update(int id)
         {
+            EditUserViewModel user = await _userService.EditUserById(id);
+            if (user == null)
+                return NotFound();
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Update(EditUserViewModel model)
         {
             if (!ModelState.IsValid)
-            {
                 return View(model);
+            var result = await _userService.EditUser(model);
+            #region checkResult
+            switch (result)
+            {
+                case EditUserResult.Success:
+                    break;
+                case EditUserResult.Error:
+                    break;
+                case EditUserResult.Emailduplicated:
+                    break;
+                case EditUserResult.UserNotFound:
+                    break;
+                case EditUserResult.MobileDuplicated:
+                    break;
             }
+            #endregion
             return View();
         }
 
